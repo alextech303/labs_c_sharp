@@ -8,6 +8,7 @@ b) Выполнить индивидуальное задание (по вари
 int min_value;
 int max_value;
 int size;
+int first_max_value=0;
 
 input_size:
 
@@ -63,3 +64,16 @@ foreach (int i in array)
 }
 
 //Вариант_8. Найти индекс первого максимального элемента.
+
+for(int i = 0; i<array.Length; i++)
+{
+
+    if (array[i+1]>array[i])
+    {
+        first_max_value = array[i+1];
+        break;
+    }
+
+}
+
+Console.WriteLine($"Первое максимальное значение в массиве = {first_max_value}");
