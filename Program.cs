@@ -21,9 +21,7 @@ if (!result_size)
    
     goto input_size;
 }
-if (result_size) goto create_array;
 
-create_array:
 int[] array = new int[size];
 
 while (true)
