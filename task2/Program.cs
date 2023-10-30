@@ -59,6 +59,8 @@ Console.WriteLine();
     третью – с четвертой и т.д. Если количество строк в массиве нечетное, то оставить массив без изменений.*/
 Console.WriteLine("____________________");
 
+if (size%2==0) { 
+
 for (int i = 0; i < size; i++)
 {
     for (int j = 0; j < size; j++)
@@ -72,3 +74,13 @@ for (int i = 0; i < size; i++)
     Console.WriteLine();
 }
 Console.WriteLine();
+} else {
+    for (int i = 0; i < size; i++)
+    {
+        for (int j = 0; j < size; j++)
+        {
+         Console.Write($"{array[i, j]}\t");
+        }
+        Console.WriteLine();
+    }
+    Console.WriteLine();
