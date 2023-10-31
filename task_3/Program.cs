@@ -10,6 +10,8 @@ b) Выполнить индивидуальное задание. При нео
 int min_value;
 int max_value;
 int size;
+int compare_naumber;
+int count=0;
 Random random = new Random();
 input_size:
 
@@ -61,6 +63,36 @@ for (int i = 0; i < size; i++)
         array[i][j]=random.Next(min_value, max_value+1);
         Console.Write($"{array[i][j]}\t");
     }
+    Console.WriteLine();
+}
+Console.WriteLine();
+
+
+
+Console.WriteLine(" Вариант_8. Для каждой строки подсчитать количество элементов,\n"+
+    "больших заданного числа, записать данные в новый массив.");
+Console.WriteLine();
+while (true)
+{
+    Console.WriteLine("Введите число для сравнения с элементами строки зубчатого массива:");
+
+    if (int.TryParse(Console.ReadLine(), out compare_naumber))
+    {
+        break;
+    }
+    else Console.WriteLine("Неверный ввод");
+}
+
+for (int i = 0; i < size; i++){
+  for (int j = 0; j < array[i].Length; j++)
+    {
+        if (array[i][j]>compare_naumber)
+        {
+            count++;
+        }
+   }
+    Console.Write($"для строки {i} количество элементов больше числа {compare_naumber} = {count}\t");
+    count=0;
     Console.WriteLine();
 }
 Console.WriteLine();
